@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    padding: 30px;
+    color: white;
+    font-size: larger;
+    font-style: initial;
+}
+
+nav ul li,
+a,
+.texto {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+h2 {
+    color: rgb(116, 0, 0);
+}
+
+h3 {
+    color: rgb(65, 62, 62);
+}
+
+.primeranavegacion {
+    position: sticky;
+    top: 0;
+    background-color: red;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    color: rgb(182, 182, 141);
+}
+
+/*FLEXBOX*/
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ultimanavegacion {
+    display: flex;
+    justify-content: right;
+}
+
+.fotos {
+    display: flex;
+    flex-direction: column;
+    justify-content: right
+}
+
+/*GRID*/
+.separar {
+    display: grid;
+    border: solid 1px white;
+}
+
+.columna {
+    display: grid;
+    grid-template-columns: repeat(2, 20%);
+    grid-template-rows: repeat(6, 190px);
+}
+
+.variedad {
+    grid-area: 1 / 1 / 7 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.fotos {
+    grid-area: 1 / 4 / 7 / 6;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*MEDIA QUERIES- las hice mas o menos como entendi nose si estaran bien,cualquier cosa me decis*/ 
+/*CELULARES*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+    .columna {
+        display: flex;
+        justify-content: left;
+
+    }   
+}
+
+
+
+/*tablets*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .columna {
+        display: flex;
+        justify-content: left;
+    }
+}
+
+/*animaciones-transformaciones-trancisiones*/
+.navbar:hover{
+    transition:all 1s;
+    transform: scale(2);
+    width: 1px;
+}
+/*BOOTSTRAP-todo lo que se agrego es a modo de ejemplificacion,luego se agregara todo correctamente*/
+.card-title{
+    color: black;
+}
+.card-text{
+    font-size:medium;
+}
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.carta{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.navbar{
+    padding: 1px;
+    margin: 0;
+}
