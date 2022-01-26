@@ -171,3 +171,6 @@ p {
 .fix{
     padding: 10px;
 }
+a:visited{
+    color: white;
+}
